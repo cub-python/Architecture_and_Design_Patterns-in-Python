@@ -1,5 +1,6 @@
 import quopri
-from requests import GetRequests, PostRequests
+# from requests import GetRequests, PostRequests
+from pumba_framework.requests import PostRequests, GetRequests
 
 
 class PageNotFound404:
@@ -8,7 +9,6 @@ class PageNotFound404:
 
 
 class Framework:
-
     """Класс Framework - основа фреймворка"""
 
     def __init__(self, routes_obj, fronts_obj):
