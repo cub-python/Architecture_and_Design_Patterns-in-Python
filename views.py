@@ -1,5 +1,4 @@
 from datetime import date
-
 from patterns.creative_patterns import Engine, Logger
 from patterns.structural_patterns import AppRoute, Debug
 from pumba_framework.templator import render
@@ -11,11 +10,12 @@ routes = {}
 
 
 # контроллер - главная страница
-@AppRoute(routes = routes, url='/')
+@AppRoute(routes=routes, url='/')
 class Index:
+    @Debug(name='Index')
     def __call__(self, request):
-        return '200 OK', render('index.html', data=request.get('data', None))
-objects_list = site.categories
+        return '200 OK', render('index.html', objects_list=site.categories)
+
 
 # контроллер "О проекте"
 @AppRoute(routes=routes, url='/about/')

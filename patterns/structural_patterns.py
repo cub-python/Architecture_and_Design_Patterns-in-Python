@@ -1,12 +1,8 @@
 from time import time
-from urls import routes
 
 # структурный паттернs - Декоратор
-from urls import routes
-
-
 class AppRoute:
-    def __init__(self, rotes, url):
+    def __init__(self, routes, url):
         # Сохраняем значение переданного параметра
 
         self.routes = routes
